@@ -1,6 +1,11 @@
+
 # Laravel Blog Application
 
 This is a simple Laravel Blog system with authentication, post creation/editing/deleting, and image upload functionality. The application uses the Repository Design Pattern.
+
+## Demo 
+
+https://github.com/user-attachments/assets/14b99636-90c3-458f-af46-fc04b68fc1e3
 
 
 ## 📦 Requirements
