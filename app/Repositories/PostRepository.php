@@ -13,6 +13,7 @@ class PostRepository implements PostRepositoryInterface
     }
     public function savePost(array $data, $id = null)
     {
+        // if id is not null --> update  , if id = null --> create
         return Post::updateOrCreate(
             ['id' => $id],
             $data

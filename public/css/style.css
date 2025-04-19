@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poetsen+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(186, 194, 205, 0.26);
+}
+/** Start of Home page style **/
+#home-title , #dashboard-title{
+    font-family: "Poetsen One", sans-serif;
+    color: #154d8e;
+    font-weight: 300;
+}
+#home-desc{
+    font-family: "Leckerli One", cursive;
+    color: #11253c;
+}
+/** End of Home page style **/
+
+
+/** Start of add/edit page style **/
+.card-header{
+    background-color: #213555;
+}
+.save-post{
+    background-color: #213555;
+    transition: opacity 0.3s ease-in-out;
+}
+.save-post:hover{
+    opacity: 0.9;
+}
+/** End of add/edit page style **/
+
+
+/** Start of Home page style **/
+
+/** End of Home page style **/
+
+
+/** Start of Home page style **/
+
+/** End of Home page style **/
+
+
+/** Start of Home page style **/
+
+/** End of Home page style **/
+
+
+/** Start of Home page style **/
+
+/** End of Home page style **/

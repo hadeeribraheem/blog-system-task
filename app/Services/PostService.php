@@ -28,6 +28,7 @@ class PostService
 
             $post = $this->postRepo->savePost($data);
 
+
             if ($file) {
                 $imagePath = $this->imageService->upload($file, 'posts');
                 $post->image()->create(['path' => $imagePath]);
@@ -49,13 +50,14 @@ class PostService
 
             $post = $this->postRepo->savePost($data, $id);
 
+            // if new img --> uploaded, delete old img & save the new img
             if ($file) {
                 if ($post->image) {
                     $this->imageService->deleteOldImage($post);
                     $post->image->delete();
 
                 }
-
+                // save the new img
                 $imagePath = $this->imageService->upload($file, 'posts');
                 $post->image()->create(['path' => $imagePath]);
             }
@@ -63,6 +65,7 @@ class PostService
             return $post;
         });
     }
+    // delete the post ad his images
     public function deletePost(Post $post)
     {
         return DB::transaction(function () use ($post) {

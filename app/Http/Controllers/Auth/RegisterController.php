@@ -24,8 +24,10 @@ class RegisterController extends Controller
 
     public function register(SaveUserInfoRequest $request)
     {
+        // validate data and hash the password
         $data= $request->validated();
         $data['password'] = Hash::make($data['password']);
+        // use repo to create the user
         $this->userRepo->saveUser($data);
 
         Flasher::addSuccess('Account created successfully.');

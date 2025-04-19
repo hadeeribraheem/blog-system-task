@@ -3,8 +3,8 @@
 @section('title', 'All Posts')
 
 @section('content')
-    <h1 class="text-center">Welcome to the Blog</h1>
-    <p class="text-center">Explore posts and share your thoughts!</p>
+    <h1 class="text-center" id="home-title">Welcome to the Blog</h1>
+    <p class="text-center" id="home-desc">Explore posts and share your thoughts!</p>
 
     <div class="row g-4">
         @forelse ($posts_arr as $post)

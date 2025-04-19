@@ -5,14 +5,13 @@
 @section('content')
     <div class="container mt-5">
         <div class="card shadow-sm border-0" style="max-width: 700px; margin: auto;">
-            <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">Create New Post</h5>
+            <div class="card-header text-white">
+                <h5 class="mb-0"><i class="bi bi-vector-pen me-2"></i>Create New Post</h5>
             </div>
 
             <div class="card-body">
                 <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-
                     {{-- Title --}}
                     <div class="mb-3">
                         <label for="title" class="form-label">Post Title</label>
@@ -49,7 +48,7 @@
                     {{-- Submit --}}
                     <div class="d-flex justify-content-between">
                         <a href="{{ route('home') }}" class="btn btn-secondary">Cancel</a>
-                        <button type="submit" class="btn btn-primary">Publish</button>
+                        <button type="submit" class="text-white btn save-post">Publish</button>
                     </div>
                 </form>
             </div>

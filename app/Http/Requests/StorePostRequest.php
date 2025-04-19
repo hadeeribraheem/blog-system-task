@@ -22,9 +22,23 @@ class StorePostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'   => 'required|min:5|string|max:100',
-            'content' => 'required|string',
+            'title'   => 'required|min:5|string|max:100|regex:/^[\pL\s]+$/u',
+            'content' => 'required|string|min:5',
             'image'   => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'The post title is required.',
+            'title.min' => 'The title must be at least 5 characters.',
+            'title.max' => 'The title must not exceed 100 characters.',
+            'title.regex' => 'The title may only contain letters and spaces.',
+            'content.required' => 'The post content is required.',
+            'image.image' => 'The file must be an image.',
+            'image.mimes' => 'The image must be a file of type: jpg, jpeg, png.',
+            'image.max' => 'The image size must not exceed 2MB.',
+        ];
+    }
+
 }

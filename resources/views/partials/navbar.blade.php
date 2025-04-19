@@ -1,6 +1,6 @@
 <!--- ====== nav bar ====== --->
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
-    <a class="navbar-brand fw-bold text-primary" href="{{ route('home') }}">MyBlog</a>
+    <a class="navbar-brand fw-bold" style="color: #1b63af;" href="{{ route('home') }}">MyBlog</a>
 
     <div class="collapse navbar-collapse justify-content-end">
         <ul class="navbar-nav">
@@ -14,7 +14,7 @@
                 <li class="nav-item mt-1">
                     <form action="{{ route('logout') }}" method="POST" class="d-inline">
                         @csrf
-                        <button class="btn btn-sm btn-danger">Logout</button>
+                        <button class="btn btn-sm btn-danger"><i class="bi bi-box-arrow-right me-2"></i>Logout</button>
                     </form>
                 </li>
             @endauth

@@ -17,13 +17,16 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
     {
+        // validate the data that user entered
         $data = $request->validated();
 
+        // authenticate user with the data he entered , --> if success flash a success msg and redirect to his dashboard
         if (Auth::attempt($data)) {
             Flasher::addSuccess('Welcome back!');
             return redirect()->route('dashboard');
         }
 
+        //--> if authentication failed , flash a error msg and redirect back with old input
         Flasher::addError('Invalid credentials. Please try again.');
         return back()->withInput();
     }
