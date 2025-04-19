@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/14b99636-90c3-458f-af46-fc04b68fc1e3
 
 - PHP >= 8.1
 - Composer
-- MySQL or SQLite
+- MySQL 
 - Laravel 10
 
 
@@ -64,7 +64,7 @@ php artisan serve
 
 To access the dashboard after seeding, use:
 
-- **Email**: any user mail in database after seeding
+- **Email**: any user's mail in database after seeding
 - **Password**: password
 
 
