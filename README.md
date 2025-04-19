@@ -16,7 +16,7 @@ This is a simple Laravel Blog system with authentication, post creation/editing/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/laravel-blog.git
+git clone https://github.com/hadeeribraheem/blog-system-task.git
 cd blog-system
 ```
 
